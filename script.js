@@ -1,4 +1,5 @@
 const formCustomer = document.getElementById("formCustomer");
+const baseUrl ="https://w6-expressjs-production.up.railway.app";
 formCustomer.addEventListener("submit",(event)=>{
     event.preventDefault();
     const name = document.getElementById("name").value;
@@ -38,7 +39,7 @@ formCustomer.addEventListener("submit",(event)=>{
 
 
 
-    fetch("http://localhost:3000/api/customers",{
+    fetch(`${baseUrl}/api/customers`,{
         method:"POST",
         headers: {
             "Content-Type":"application/json"
